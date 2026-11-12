@@ -3,7 +3,7 @@ const signinButton = document.getElementById("signin-button");
 const welcomeScreen = document.getElementById("welcome-screen");
 const signupScreen = document.getElementById("signup-screen");
 const signinScreen = document.getElementById("signin-screen");
-const backButton = document.getElementById("back-button");
+const backButtons = document.querySelectorAll(".back-button");
 
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -24,11 +24,11 @@ signinButton.addEventListener("click", function() {
     signupScreen.hidden = true;
 });
 
-backButton.addEventListener("click", function() {
+backButtons.forEach(button => button.addEventListener("click", function() {
     welcomeScreen.hidden = false;
     signinScreen.hidden = true;
     signupScreen.hidden = true;
-});
+}));
 
 
 
@@ -138,7 +138,7 @@ function checkMatch() {
 }
 
 function checkbox() {
-    const checkboxError = terms.parentElement.querySelector(".error-message");
+    const checkboxError = document.querySelector(".check-error .error-message");
 
     if (!terms.checked) {
         checkboxError.textContent = "Please agree to the terms and conditions.";
@@ -170,6 +170,6 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     if (validateForm()) {
-        console.log("Form is valid.")
+        alert("Your account has been created !\nWelcome to Gardenia's book club <3")
     }
 });
