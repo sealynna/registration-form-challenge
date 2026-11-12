@@ -170,6 +170,9 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     if (validateForm()) {
-        alert("Your account has been created !\nWelcome to Gardenia's book club <3")
+        alert("Your account has been created !\nWelcome to Gardenia's book club <3");
+        welcomeScreen.hidden = false;
+        signinScreen.hidden = true;
+        signupScreen.hidden = true;
     }
 });
