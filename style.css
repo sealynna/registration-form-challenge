@@ -2,8 +2,7 @@ body{
     margin: 0;
     background-color: #e8e5dd;
     color: #2a3723;
-    font-family: 'Times New Roman', Times, serif;
-
+    font-family: 'Courier New', Courier,;
 }
 
 .navbar{
@@ -23,8 +22,8 @@ body{
 
 .nav-links ul{
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .nav-links a{
@@ -59,7 +58,9 @@ h1 {
 
 h3{
     font-size: 1.1rem;
-    padding: 0px 60px;
+    max-width: 700px;
+    padding: 0px 16px;
+    margin: 0 auto 60px;
     color: #0c0a08;
     margin-bottom: 60px;
 }
@@ -95,26 +96,46 @@ h5{
 }
 
 #signup-button:hover,
-#signin-button:hover {
+#signin-button:hover,
+#submit-button:hover,
+.back-button:hover {
     border: 2px solid #3f5235;
     background-color: #3f5235;
 }
 
-.data {
-    display: flex;
-    flex-direction: column;;
+.data,
+.profile {
     gap: 20px;
     margin-top: 70px;
 }
-.data label{
+.data label,
+.profile label {
     margin-left: 30%;
 }
 
-.data input {
+.data input,
+.profile input {
+    display: flex;
+    flex-direction: column;
     background-color: #ebede7;
     border-radius: 5px;
     border: 2px solid #898b7d;
     padding: 5px 10px;
+}
+.box-error {
+    direction: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-bottom: 10PX;
+    width: 40%;
+}
+.check-error {
+    margin-left: 30%;
+    width: 40%;
+}
+
+.check {
+    display: flex;
 }
 
 input:focus{
@@ -132,8 +153,9 @@ input:focus{
     text-decoration: underline;
 }
 
-#submit-button{
-    width: 80px;
+#submit-button,
+#profile-signin-button {
+    width: fit-content;
     font-family: 'Times New Roman', Times, serif;
     background-color: #b9bba8;
     border: 2px solid #898b7d;
@@ -141,11 +163,11 @@ input:focus{
     padding: 4px 8px;
     font-size: 1rem;
     cursor: pointer;
-    margin-left: 50%;
-    transform: translate(-50%);
+    margin-left: 30%;
+    margin-top: 20px;
 }
 
-#back-button{
+.back-button{
     width: 70px;
     font-family: 'Times New Roman', Times, serif;
     background-color: #b9bba8;
@@ -160,7 +182,7 @@ input:focus{
     bottom: 20px;
 }
 
-.error-message{
+.error-message {
     color: rgb(153, 32, 32);
     font-size: 0.8rem;
 }
