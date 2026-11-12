@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Gardenia's Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Gardenia's Books</div>
+        <div class="nav-links">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="monthpick.html">Month's pick</a>
+                <a href="profile.html">Profile</a>
+                <a href="contact.html">Contact</a>
+            </ul>
+    </nav>
+    <main>
+        <div id="welcome-screen">
+            <h1>Welcome to Gardenia's Books!</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis earum. Doloremque consequuntur nemo accusantium suscipit dolorum voluptas alias ad deleniti eligendi omnis unde libero, aperiam, vitae doloribus quam?
+            </h3>
+            <h4>Your next favorite book is waiting for you, join us !</h4>
+            <button type="button" id="signup-button">Sign up</button>
+            <h5>Already have an account ?</h5>
+            <button type="button" id="signin-button">Sign in</button>
+        </div>
+        <div id="signup-screen" hidden>
+            <form class="data" novalidate>
+                <div>
+                    <label for="name">Full Name: </label>
+                    <input type="text" id="name" name="name" placeholder="Robin Swift" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="email">Email Adress: </label>
+                    <input type="email" id="email" name="email" placeholder="you@exemple.com" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="tel">Phone Number: </label>
+                    <input type="tel" id="tel" name="tel" placeholder="+213 123 456 789" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="confirm">Confirm Password: </label>
+                    <input type="password" id="confirm" name="confirm" placeholder="Confirm your password" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="terms-and-conditions">• I agree to <a href="terms and conditions.html">terms and conditions</a></label>
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <button type="submit" id="submit-button">Create account</button>
+            </form>
+            <button id="back-button">Back</button>
+        </div>
+        <div id="signin-screen" hidden>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
