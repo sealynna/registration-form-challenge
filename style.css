@@ -24,6 +24,7 @@ body{
 .nav-links ul{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .nav-links a{
