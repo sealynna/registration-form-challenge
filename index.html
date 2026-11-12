@@ -21,8 +21,7 @@
     <main>
         <div id="welcome-screen">
             <h1>Welcome to Gardenia's Books!</h1>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis earum. Doloremque consequuntur nemo accusantium suscipit dolorum voluptas alias ad deleniti eligendi omnis unde libero, aperiam, vitae doloribus quam?
-            </h3>
+            <h3>A place where minds get freed from all restrains. Whether you want to relive the past or create the future, experience the sweetness of love or the anger of revenge, there's room for everyone here!            </h3>
             <h4>Your next favorite book is waiting for you, join us !</h4>
             <button type="button" id="signup-button">Sign up</button>
             <h5>Already have an account ?</h5>
@@ -30,42 +29,59 @@
         </div>
         <div id="signup-screen" hidden>
             <form class="data" novalidate>
-                <div>
-                    <label for="name">Full Name: </label>
+                <label for="name">Full Name: </label>
+                <div class = "box-error">
                     <input type="text" id="name" name="name" placeholder="Robin Swift" required>
                     <span class="error-message"></span>
                 </div>
-                <div>
-                    <label for="email">Email Adress: </label>
+                <label for="email">Email Adress: </label>
+                <div class = "box-error">
                     <input type="email" id="email" name="email" placeholder="you@exemple.com" required>
                     <span class="error-message"></span>
                 </div>
-                <div>
-                    <label for="tel">Phone Number: </label>
+                <label for="tel">Phone Number: </label>
+                <div class = "box-error">
                     <input type="tel" id="tel" name="tel" placeholder="+213 123 456 789" required>
                     <span class="error-message"></span>
                 </div>
-                <div>
-                    <label for="password">Password: </label>
+                <label for="password">Password: </label>
+                <div class = "box-error">
                     <input type="password" id="password" name="password" placeholder="Create a password" required>
                     <span class="error-message"></span>
                 </div>
-                <div>
-                    <label for="confirm">Confirm Password: </label>
+                <label for="confirm">Confirm Password: </label>
+                <div class = "box-error">
                     <input type="password" id="confirm" name="confirm" placeholder="Confirm your password" required>
                     <span class="error-message"></span>
                 </div>
-                <div>
-                    <label for="terms-and-conditions">• I agree to <a href="terms and conditions.html">terms and conditions</a></label>
+                <div class="check">
+                    <label for="terms-and-conditions">• I agree to <a href="terms and conditions.html">terms and conditions</a></label>                    
                     <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                </div>
+                <div class = "check-error">    
                     <span class="error-message"></span>
                 </div>
 
                 <button type="submit" id="submit-button">Create account</button>
             </form>
-            <button id="back-button">Back</button>
+            <button class="back-button">Back</button>
         </div>
         <div id="signin-screen" hidden>
+            <form class="profile" novalidate>
+                <label for="signin-email">Email Adress: </label>
+                <div class = "box-error">
+                    <input type="email" id="signin-email" name="signin-email" placeholder="you@exemple.com" required>
+                    <span class="error-message"></span>
+                </div>
+                <label for="signin-password">Password: </label>
+                <div class = "box-error">
+                    <input type="password" id="signin-password" name="signin-password" placeholder="Create a password" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <button type="submit" id="profile-signin-button">Sign in</button>
+            </form>
+            <button class="back-button">Back</button>
         </div>
     </main>
     <script src="script.js"></script>
